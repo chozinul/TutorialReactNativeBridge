@@ -1,0 +1,3 @@
+rootProject.name = 'TutorialReactNativeBrigde'
+
+include ':app'
