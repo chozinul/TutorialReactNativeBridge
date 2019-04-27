@@ -8,10 +8,20 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
-import { NativeModules } from 'react-native'
+import Counter from "./controller/Counter"
 
-console.log('NativeModules.Counter', NativeModules.Counter)
-console.log('ala')
+
+Counter.addListener(
+  "onIncrement",
+  res => console.log("event onIncrement", res)
+)
+
+
+Counter.increment()
+Counter.incrementEmit()
+Counter.decrement()
+Counter.decrement()
+Counter.decrement()
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
