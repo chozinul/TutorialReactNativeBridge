@@ -37,6 +37,9 @@
 		C146F9EA2273E9D900D5BFA1 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = C146F9E32273E9D900D5BFA1 /* Counter.m */; };
 		C146F9EB2273E9D900D5BFA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C146F9E42273E9D900D5BFA1 /* Images.xcassets */; };
 		C146F9EC2273E9D900D5BFA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C146F9E52273E9D900D5BFA1 /* AppDelegate.m */; };
+		C146F9F22274173300D5BFA1 /* CounterViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C146F9F12274173300D5BFA1 /* CounterViewManager.swift */; };
+		C146F9F4227417AB00D5BFA1 /* CounterViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C146F9F3227417AB00D5BFA1 /* CounterViewManager.m */; };
+		C146F9F72274199C00D5BFA1 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C146F9F62274199C00D5BFA1 /* CounterView.swift */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
@@ -346,6 +349,9 @@
 		C146F9E42273E9D900D5BFA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C146F9E52273E9D900D5BFA1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C146F9E62273E9D900D5BFA1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C146F9F12274173300D5BFA1 /* CounterViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewManager.swift; sourceTree = "<group>"; };
+		C146F9F3227417AB00D5BFA1 /* CounterViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CounterViewManager.m; sourceTree = "<group>"; };
+		C146F9F62274199C00D5BFA1 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -601,14 +607,12 @@
 		C146F9DA2273E9D800D5BFA1 /* TutorialReactNativeBrigde */ = {
 			isa = PBXGroup;
 			children = (
-				C146F9DB2273E9D900D5BFA1 /* AppDelegate.h */,
-				C146F9DC2273E9D900D5BFA1 /* LaunchScreen.xib */,
+				C146F9EE2274161F00D5BFA1 /* Config */,
+				C146F9EF2274167B00D5BFA1 /* Resource */,
+				C146F9F52274196D00D5BFA1 /* View */,
+				C146F9F02274171700D5BFA1 /* ViewManager */,
 				C146F9DE2273E9D900D5BFA1 /* Controller */,
-				C146F9E02273E9D900D5BFA1 /* main.m */,
 				C146F9E12273E9D900D5BFA1 /* Connector */,
-				C146F9E42273E9D900D5BFA1 /* Images.xcassets */,
-				C146F9E52273E9D900D5BFA1 /* AppDelegate.m */,
-				C146F9E62273E9D900D5BFA1 /* Info.plist */,
 			);
 			path = TutorialReactNativeBrigde;
 			sourceTree = "<group>";
@@ -626,8 +630,54 @@
 			children = (
 				C146F9E22273E9D900D5BFA1 /* TutorialReactNativeBrigde-Bridging-Header.h */,
 				C146F9E32273E9D900D5BFA1 /* Counter.m */,
+				C146F9F3227417AB00D5BFA1 /* CounterViewManager.m */,
 			);
 			path = Connector;
+			sourceTree = "<group>";
+		};
+		C146F9EE2274161F00D5BFA1 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				C146F9DB2273E9D900D5BFA1 /* AppDelegate.h */,
+				C146F9E52273E9D900D5BFA1 /* AppDelegate.m */,
+				C146F9E02273E9D900D5BFA1 /* main.m */,
+				C146F9E62273E9D900D5BFA1 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		C146F9EF2274167B00D5BFA1 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C146FA4722741B2D00D5BFA1 /* Base.lproj */,
+				C146F9DC2273E9D900D5BFA1 /* LaunchScreen.xib */,
+				C146F9E42273E9D900D5BFA1 /* Images.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		C146F9F02274171700D5BFA1 /* ViewManager */ = {
+			isa = PBXGroup;
+			children = (
+				C146F9F12274173300D5BFA1 /* CounterViewManager.swift */,
+			);
+			path = ViewManager;
+			sourceTree = "<group>";
+		};
+		C146F9F52274196D00D5BFA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C146F9F62274199C00D5BFA1 /* CounterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C146FA4722741B2D00D5BFA1 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Base.lproj;
+			path = ../Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1146,7 +1196,10 @@
 				C146F9EC2273E9D900D5BFA1 /* AppDelegate.m in Sources */,
 				C146F9E92273E9D900D5BFA1 /* main.m in Sources */,
 				C146F9EA2273E9D900D5BFA1 /* Counter.m in Sources */,
+				C146F9F72274199C00D5BFA1 /* CounterView.swift in Sources */,
 				C146F9E82273E9D900D5BFA1 /* Counter.swift in Sources */,
+				C146F9F22274173300D5BFA1 /* CounterViewManager.swift in Sources */,
+				C146F9F4227417AB00D5BFA1 /* CounterViewManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1241,7 +1294,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 9T73B6L4GQ;
-				INFOPLIST_FILE = TutorialReactNativeBrigde/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TutorialReactNativeBrigde/Config/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1264,7 +1317,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9T73B6L4GQ;
-				INFOPLIST_FILE = TutorialReactNativeBrigde/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TutorialReactNativeBrigde/Config/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
