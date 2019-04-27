@@ -38,7 +38,7 @@ export default class App extends Component {
           </Text>
         </TouchableOpacity>
 
-        <CounterView style={ styles.wrapper }/>
+        <CounterView style={ styles.wrapper } count={10}/>
 
       </View>
     );
