@@ -5,7 +5,7 @@ class Counter: NSObject {
 
   @objc
   func constantsToExport() -> [AnyHashable : Any]! {
-    return ["initialCount": 0]
+    return ["initialCount": 1]
   }
   
   @objc

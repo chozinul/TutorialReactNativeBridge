@@ -11,13 +11,13 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 import { NativeModules } from 'react-native'
 
 console.log('NativeModules.Counter', NativeModules.Counter)
-console.log('alagadabra')
+console.log('ala')
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
     'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
+    'Shake or press menu button for dev menur',
 });
 
 type Props = {};
