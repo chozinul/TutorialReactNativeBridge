@@ -14,7 +14,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-import CounterView from './component/CounterView'
+import CounterView from './CounterView'
 
 export default class App extends Component {
   

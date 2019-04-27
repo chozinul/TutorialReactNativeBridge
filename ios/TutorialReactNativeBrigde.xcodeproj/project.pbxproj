@@ -610,29 +610,20 @@
 				C146F9EE2274161F00D5BFA1 /* Config */,
 				C146F9EF2274167B00D5BFA1 /* Resource */,
 				C146F9F52274196D00D5BFA1 /* View */,
-				C146F9F02274171700D5BFA1 /* ViewManager */,
-				C146F9DE2273E9D900D5BFA1 /* Controller */,
-				C146F9E12273E9D900D5BFA1 /* Connector */,
+				C146F9F02274171700D5BFA1 /* RNManager */,
+				C146F9E12273E9D900D5BFA1 /* RNConnector */,
 			);
 			path = TutorialReactNativeBrigde;
 			sourceTree = "<group>";
 		};
-		C146F9DE2273E9D900D5BFA1 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				C146F9DF2273E9D900D5BFA1 /* Counter.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		C146F9E12273E9D900D5BFA1 /* Connector */ = {
+		C146F9E12273E9D900D5BFA1 /* RNConnector */ = {
 			isa = PBXGroup;
 			children = (
 				C146F9E22273E9D900D5BFA1 /* TutorialReactNativeBrigde-Bridging-Header.h */,
 				C146F9E32273E9D900D5BFA1 /* Counter.m */,
 				C146F9F3227417AB00D5BFA1 /* CounterViewManager.m */,
 			);
-			path = Connector;
+			path = RNConnector;
 			sourceTree = "<group>";
 		};
 		C146F9EE2274161F00D5BFA1 /* Config */ = {
@@ -656,12 +647,13 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		C146F9F02274171700D5BFA1 /* ViewManager */ = {
+		C146F9F02274171700D5BFA1 /* RNManager */ = {
 			isa = PBXGroup;
 			children = (
 				C146F9F12274173300D5BFA1 /* CounterViewManager.swift */,
+				C146F9DF2273E9D900D5BFA1 /* Counter.swift */,
 			);
-			path = ViewManager;
+			path = RNManager;
 			sourceTree = "<group>";
 		};
 		C146F9F52274196D00D5BFA1 /* View */ = {
