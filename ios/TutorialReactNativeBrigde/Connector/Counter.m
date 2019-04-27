@@ -11,7 +11,6 @@ RCT_EXTERN_METHOD(getCount: (RCTResponseSenderBlock)callback)
 
 RCT_EXTERN_METHOD(getObject: (RCTResponseSenderBlock)callback)
 
-
 RCT_EXTERN_METHOD(
                   decrement: (RCTPromiseResolveBlock)resolve
                   rejecter: (RCTPromiseRejectBlock)reject

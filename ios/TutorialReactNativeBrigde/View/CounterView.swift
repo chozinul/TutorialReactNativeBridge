@@ -15,15 +15,11 @@ class CounterView: UIView {
     }
   }
   
-  @objc func setCount(_ val: NSNumber) {
-    count = val
-    
-  }
+  @objc var onClick: RCTDirectEventBlock?
   
   override init(frame: CGRect) {
     super.init(frame: frame)
     self.addSubview(button)
-    increment()
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -36,13 +32,25 @@ class CounterView: UIView {
     b.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     b.addTarget(
       self,
-      action: #selector(increment),
+      action: #selector(touchUpInside),
       for: .touchUpInside
     )
     return b
   }()
   
-  @objc func increment() {
-    count = count.intValue +  1 as NSNumber
+  @objc func setCount(_ val: NSNumber) {
+    count = val
+    
   }
+  
+  @objc func touchUpInside() {
+      if onClick != nil {
+        onClick!(["count": count])
+      }
+  }
+  
+  @objc func update(value: NSNumber) {
+    count = value
+  }
+  
 }

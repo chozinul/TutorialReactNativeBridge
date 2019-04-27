@@ -11,34 +11,36 @@ import {
   StyleSheet, 
   Text, 
   View, 
-  TouchableOpacity,
-  requireNativeComponent } from 'react-native';
+  TouchableOpacity
+} from 'react-native';
 
-const CounterView = requireNativeComponent("CounterView")
+import CounterView from './component/CounterView'
 
 export default class App extends Component {
   
   state = {
-    count: 1
+    countTop: 0,
+    countBottom: 10
   };
 
-  increment = () => {
-    this.setState({ count: this.state.count + 1 })
+  incrementTop = (count) => {
+    this.setState({ countTop: count + 1 })
   }
 
   render() {
     return (
       <View style={styles.container}>
+        
         <TouchableOpacity
           style={[styles.wrapper, styles.border]}
-          onPress={this.increment}
+          onPress={() => this.incrementTop(this.state.countTop)}
         >
           <Text style={styles.button}>
-            {this.state.count}
+            {this.state.countTop}
           </Text>
         </TouchableOpacity>
 
-        <CounterView style={ styles.wrapper } count={10}/>
+        <CounterView initialCount={this.state.countBottom} > </CounterView>
 
       </View>
     );
